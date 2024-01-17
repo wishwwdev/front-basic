@@ -13,10 +13,10 @@
 
   <!-- GET 방식 : 데이터를 전송할 때 이름=값 형태를 url에 붙여서 전송 -->
   <!-- 도메인주소?name1=value&name2=vlaue2&... -->
-  
+
   <!-- POST 방식 : 데이터를 전송할 때 객체형태로 request body를 통해서 전송 -->
 
-<form action="./form-2.html" method="POST">
+<form action="./form-2.html" method="GET">
  <!-- input 요소 : 사용자로부터 입력을 받아오는 요소 -->
  <!-- placeholder : 입력에 대한 설명 지정하는 속성 -->
  <!-- value : input 요소의 기본값을 지정하는 속성 -->
@@ -38,6 +38,12 @@
  <input type="radio" name="radioValue" value="radio2" />
  <input type="hidden" name="hiddenValue" value="hidden" />
  <input type="file" />
+
+ <select name="selectValue">
+  <option value="사과">사과</option>
+  <option value="배" selected>배</option>
+  <option value="바나나">바나나</option>
+ </select>
 
  <!-- button 요소 : 사용자로부터 클릭 이벤트를 사용할 수 있도록 하는 요소 -->
  <!-- type 속성 : 사용자가 클릭을 했을 때 어떤 이벤트를 발생시킬지 지정하는 속성 -->
