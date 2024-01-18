@@ -45,12 +45,12 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;
 }
 
 /* RGB */
-.colo-rgb-255-0-0 {
+.color-rgb-255-0-0 {
  color: rgb(255, 0, 0);
 }
 
 /* RGBA */
-.colo-rgba-255-0-0-04 {
+.color-rgba-255-0-0-04 {
  color: rgba(255, 0, 0, 0.4);
 }
 
