@@ -102,7 +102,93 @@ function JavaScriptBasic () {
   result = number1 != number2;  // false(타입은 고려하지 않음)
   result = number1 !== number2; // true (타입도 같이 고려하여 비교함)
 
-  return (<></>)
+  // 조건문
+  // 조건문의 조건이 무조건 true, false형태의 boolean 값이 오지 않아도 됨
+  // false : 0, 0.0, '', undefined, null
+  const string = '';
+  if (string) {
+
+  }
+
+  // 반복문 
+  // for, while 모두 사용가능
+  // foreach 문
+  const exampleArray = ['apple', 'banana', 'carot'];
+
+  // foreach 함수 : 배열.forEach(반환값이 없는 함수);
+  exampleArray.forEach(function(item) {
+    console.log(item)
+  });
+  
+  // map 함수 : 배열.map(반환값이 있는 함수);
+  //            배열을 반복하면서 함수 작업의 반환 값으로 새로운 배열을 생성하여 반환
+  const numbers = [1, 2, 3, 4, 5];                  // 그냥 for문이라고 생각하면 될 듯
+  let resultList = numbers.map(function (item) {
+    const result = item * item;
+    return result;
+  });   // resultList = [1, 4, 9, 16, 25]
+
+  // filter 함수 : 배열.filter(조건문을 가진 함수);
+  //               배열을 반복하면서 함수 작성된 조건문에 부합하는 요소만 반환
+  resultList = numbers.filter(function (item) {     // for문 + if문 이라고 생각하면 될 듯
+    return item % 2 === 0;
+  });   // resultList = [2, 4]
+
+  // 객체 생성
+  // 1. JSON 형식을 이용하여 생성(바로 생성)
+  // JSON : { 'key': 'value', 'key': 'value', ... }
+  let object1 = {
+    name: "홍길동",
+    age: 29,
+    address: '부산광역시'
+  };
+
+  // 2. class를 이용하여 생성
+  class CHuman {
+    name: string;
+    age: number;
+    address: string;
+
+    constructor(name: string, age: number, address: string) {
+      this.name = name;
+      this.age = age;
+      this.address = address;
+    }
+  };
+  object1 = new CHuman('김철수', 30, '서울특별시');
+
+  // 3. interface를 이용하여 생성
+  interface IHuman {
+    name: string;
+    age: number;
+    address: string;
+  }
+  let object2: IHuman = {
+    name: '고길동',
+    age: 50,
+    address: '부산광역시'
+  }
+
+  object1.age;
+
+  // 구조 분해 할당
+  // let name = object1.name;
+  // let age = object1.age;
+
+  let { name, age } = object1; // { name: '홍길동'. age: 30, address: '부산' }
+  console.log(name);
+  console.log(age);
+
+  let { address, ...other } = object1;
+  // address: '부산', other: { name: '홍길동', age: 30 }
+
+  
+
+
+
+
+
+
   
   return (<></>);
 
