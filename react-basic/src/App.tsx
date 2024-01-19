@@ -9,7 +9,8 @@ function App() {
   
   return (
     <>
-      <TestComponent />
+      <TestComponent arg1='문자열' arg2={1} />
+      <TestComponent arg1='문자열' arg2={100} />
       <Header />
       <Main />
       <Footer />

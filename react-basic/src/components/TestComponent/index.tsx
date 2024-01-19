@@ -4,9 +4,14 @@
 // 관리를 용이하게 해줌
 // class 컴포넌트 / function 컴포넌트
 
+interface Props {
+  arg1: string;
+  arg2: number;
+}
+
 // 컴포넌트 선언시 주의 사항
 // 컴포넌트명의 첫글자는 반드시 대문자이어야함
-function TestComponent () {
+function TestComponent (props: Props) {
 
   const itemList = ['첫번째', '두번째', '세번째', '네번째', '다섯번째'];
   const flag = false;
@@ -20,6 +25,7 @@ function TestComponent () {
   // 그 {} 내부에서 다시 HTML을 반환하고 샆으면 () 내부에 작성
   return (
     <div>
+      <div>{props.arg1} {props.arg2}</div>
       {/* 주석 */}
       {itemList.map((item) => (<div>{item} 컴포넌트입니다.</div>))}
       {
