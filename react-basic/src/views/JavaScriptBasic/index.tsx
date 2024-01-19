@@ -182,13 +182,21 @@ function JavaScriptBasic () {
   let { address, ...other } = object1;
   // address: '부산', other: { name: '홍길동', age: 30 }
 
-  
+  let object3 = { telNumber: '010-1111-1111', email: 'email@email.com'};
+  let subObject = { ...object2, ...object3 };
+  // { name: '홍길동'. age: 30, address: '부산', telNumber: '010-1111-1111', email: 'email@email.com' }
 
+  // 함수
+  // 함수 선언 방법
+  // function 함수명 (매개변수: 타입, ...): 반환타입 {
+  //   ...
+  //   return 결과,
+  // }
 
-
-
-
-
+  // 화살표 함수
+  // 함수를 변수처럼 사용하는 것
+  // 선언 방법
+  // const 함수명 = (매개변수, ...) => { ... return 결과값 };
   
   return (<></>);
 
