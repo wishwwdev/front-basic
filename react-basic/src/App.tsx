@@ -1,5 +1,5 @@
 import './App.css';
-import TestComponent from './components/TestComponent';
+import TestComponent, { testVariable } from './components/TestComponent';
 import './style.css';
 import Footer from './views/Layout/Footer';
 import Header from './views/Layout/Header';
@@ -9,9 +9,11 @@ function App() {
   
   return (
     <>
-      <TestComponent arg1='문자열' arg2={1} />
-      <TestComponent arg1='문자열' arg2={100} />
-      <Header />
+      {/* 
+        // <TestComponent arg1={'문자열'} /> 
+        // <TestComponent arg1={'문자열'} arg2={100} />
+      */}
+      <Header count={0}/>
       <Main />
       <Footer />
     </>

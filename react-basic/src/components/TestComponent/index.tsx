@@ -6,7 +6,7 @@
 
 interface Props {
   arg1: string;
-  arg2: number;
+  arg2?: number;
 }
 
 // 컴포넌트 선언시 주의 사항
@@ -22,7 +22,7 @@ function TestComponent (props: Props) {
 
   // return에 작성하는 HTML 내부에서 JavaScript를 사용하고 싶으면 
   // {} 내부에 작성함 
-  // 그 {} 내부에서 다시 HTML을 반환하고 샆으면 () 내부에 작성
+  // 그 {} 내부에서 다시 HTML을 반환하고 싶으면 () 내부에 작성
   return (
     <div>
       <div>{props.arg1} {props.arg2}</div>
