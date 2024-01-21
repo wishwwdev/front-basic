@@ -17,3 +17,5 @@ const useStore = create<SignInStore>((set) => ({
 // state -> {email, password, setEmail}
 // { ...state } -> { email, password, setEmail }
 // { ...state, email: 'email' } -> { email: 'email', password, setEmail }  원래 있던 이메일 값을 새로 넣는 email 값으로 갈아끼운다는 뜻
+
+export default useStore;
